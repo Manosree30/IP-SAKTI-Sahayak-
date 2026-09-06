@@ -1,6 +1,0 @@
-{
-  "name": "AyurGuard - Ayurveda Regulatory & IP Intelligence",
-  "description": "Multilingual regulatory and intellectual property intelligence platform for Ayurvedic formulations, patentability, TKDL, and AYUSH compliance.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
