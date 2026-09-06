@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Marcellus', 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #2B1A14;
+    background-color: #F6EFE3;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(74, 33, 23, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 33, 23, 0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(142, 36, 28, 0.5);
+}
+
+/* Subtle parchment background effect */
+.bg-parchment-pattern {
+  background-color: #F6EFE3;
+  background-image: 
+    radial-gradient(ellipse at top left, rgba(230, 211, 179, 0.4) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(142, 36, 28, 0.04) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(246, 239, 227, 0.8));
+}
+
+.bg-wood-pattern {
+  background-color: #3A160F;
+  background-image: 
+    radial-gradient(ellipse at top, rgba(74, 33, 23, 0.8) 0%, transparent 80%),
+    radial-gradient(circle at center, rgba(142, 36, 28, 0.15) 0%, transparent 70%);
+}
+
+/* ==========================================================================
+   DARK MODE COMPREHENSIVE ADAPTATION
+   ========================================================================== */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #1A0B07 !important;
+  color: #F5E8D2 !important;
+}
+
+html.dark .bg-parchment-pattern {
+  background-color: #1F0D08 !important;
+  background-image: 
+    radial-gradient(ellipse at top left, rgba(58, 22, 15, 0.9) 0%, transparent 70%),
+    radial-gradient(ellipse at bottom right, rgba(142, 36, 28, 0.15) 0%, transparent 70%),
+    linear-gradient(to bottom, #250E09, #180905) !important;
+}
+
+html.dark header {
+  background-color: rgba(36, 14, 9, 0.94) !important;
+  border-bottom-color: #4D251B !important;
+}
+
+/* Card surfaces */
+html.dark .bg-\[\#FFFDF9\],
+html.dark .bg-\[\#FAF4EB\],
+html.dark .bg-\[\#F8F3EA\],
+html.dark .bg-\[\#F9F5EE\],
+html.dark .bg-\[\#F6EFE3\] {
+  background-color: #2A120B !important;
+}
+
+html.dark .bg-\[\#EFE0C5\],
+html.dark .bg-\[\#E6D8C3\] {
+  background-color: #381912 !important;
+}
+
+html.dark .hover\:bg-\[\#FAF4EB\]:hover,
+html.dark .hover\:bg-\[\#F2E5D0\]:hover,
+html.dark .hover\:bg-\[\#EFE0C5\]:hover,
+html.dark .hover\:bg-\[\#E2C78E\]:hover {
+  background-color: #3D1C14 !important;
+}
+
+/* Borders */
+html.dark .border-\[\#E0CFB3\],
+html.dark .border-\[\#E6D3B3\],
+html.dark .border-\[\#D8C2A0\],
+html.dark .border-\[\#EAE0D0\],
+html.dark .border-\[\#F0E5D4\],
+html.dark .border-\[\#E6D8C3\],
+html.dark .border-\[\#E8DEC8\],
+html.dark .border-\[\#CBB393\] {
+  border-color: #4A2218 !important;
+}
+
+html.dark .divide-\[\#EAE0D0\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #4A2218 !important;
+}
+
+/* Typography contrast */
+html.dark .text-\[\#3A160F\],
+html.dark .text-\[\#2B1A14\] {
+  color: #F5E8D2 !important;
+}
+
+html.dark .text-[#523326],
+html.dark .text-[#63483D],
+html.dark .text-[#4A261B],
+html.dark .text-[#4A2117],
+html.dark .text-[#552D21],
+html.dark .text-[#5C1611] {
+  color: #E2D0B6 !important;
+}
+
+html.dark .text-[#7A5B4C],
+html.dark .text-[#8C6D5F],
+html.dark .text-[#6F4E3E],
+html.dark .text-[#6B4B18] {
+  color: #C2A992 !important;
+}
+
+html.dark .bg-\[\#EFE0C5\]\/60 {
+  background-color: rgba(56, 25, 18, 0.8) !important;
+}
+
+html.dark #ayurguard-chat-panel {
+  background-color: #240E09 !important;
+  border-color: #55271C !important;
+}
+
+/* Red accents in dark mode - high-contrast vibrancy */
+html.dark .text-\[\#8E241C\] {
+  color: #EB7165 !important;
+}
+
+html.dark .bg-\[\#8E241C\]\/10,
+html.dark .bg-\[\#8E241C\]\/8,
+html.dark .bg-\[\#8E241C\]\/15 {
+  background-color: rgba(235, 113, 101, 0.18) !important;
+}
+
+html.dark .border-\[\#8E241C\]\/20,
+html.dark .border-\[\#8E241C\]\/25,
+html.dark .border-\[\#8E241C\]\/30,
+html.dark .border-\[\#8E241C\]\/40 {
+  border-color: rgba(235, 113, 101, 0.35) !important;
+}
+
+/* Form inputs in dark mode */
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark input[type="password"],
+html.dark textarea,
+html.dark select {
+  background-color: #210D08 !important;
+  color: #F5E8D2 !important;
+  border-color: #4A2218 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #9A806E !important;
+}
+
+/* Table styling in dark mode */
+html.dark table thead tr {
+  background-color: #240E09 !important;
+  color: #F5E8D2 !important;
+  border-bottom-color: #4A2218 !important;
+}
+
+html.dark table tbody tr:hover {
+  background-color: #34160F !important;
+}
+
+/* Dark mode scrollbars */
+html.dark ::-webkit-scrollbar-track {
+  background: rgba(42, 18, 11, 0.6);
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(184, 149, 90, 0.3);
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(235, 113, 101, 0.6);
+}
+
+
